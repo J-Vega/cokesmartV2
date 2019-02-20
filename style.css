@@ -1,0 +1,509 @@
+html{
+  font-family: BogleWeb,Helvetica Neue,Helvetica,Arial,sans-serif;
+}
+
+footer{
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.nav-bar{
+  background-color: red;
+  width: 100%;
+  overflow: hidden;
+}
+.nav-button{
+  background-color: inherit;
+  white-space: normal;
+  font-size: 24px;
+  padding: 25px 20px;
+  float: left;
+  color: white;
+  width: auto;
+  border: none;
+  outline: none;
+  display: block;
+  text-decoration: none;
+}
+.nav-button:hover{
+  background-color: white;
+  color: red;
+  cursor: pointer;
+}
+
+.logo{
+    width: 120px;
+    float: left;
+}
+.price{
+  border: none;
+  width: 55px;
+}
+
+.case-builder-header{
+  text-align: center;
+}
+
+.case-builder-container{
+  /*background-color: grey;*/
+  margin-top: 30px !important;
+  padding: 18px;
+  border: 1px solid grey;
+}
+.case-slot{
+	float: left;
+	margin-left: 2px;
+  margin-right: 2px;
+  padding: 12px;
+  padding-bottom: 30px;  
+  height: 32px;
+	border: 2px solid black;
+	border-radius: 4px;
+
+  transition: .7s ease;
+}
+
+.section-header{
+  text-align: center;
+}
+.case-slot-example{
+  float: left;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding: 12px;
+  padding-bottom: 30px;  
+  height: 32px;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.empty-slot{
+  background-color: #d2d2d2;
+}
+
+.filled-slot{
+  background-color: #00cc00;
+}
+
+.case-builder-info, #closeBtn {
+  -moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
+  box-shadow:inset 0px 1px 0px 0px #cf866c;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+  background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  
+  background:linear-gradient(to bottom, #f70000 83%, #000000 125%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+  background-color:#d0451b;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border:1px solid #942911;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:13px;
+  padding:9px 24px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #854629;
+}
+.case-builder-info:hover ,#closeBtn:hover{
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+  background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+  background-color:#bc3315;
+}
+.case-builder-info:active {
+  position:relative;
+  top:1px;
+}
+
+.checkout-button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
+  box-shadow: inset 0px 1px 0px 0px #adadad;
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #d0451b), color-stop(1, #bc3315));
+  background:-moz-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:-webkit-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:-o-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  background:-ms-linear-gradient(top, #d0451b 5%, #bc3315 100%);
+  
+  background: linear-gradient(to bottom, #2be600 83%, #000000 125%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d0451b', endColorstr='#bc3315',GradientType=0);
+  background-color:#d0451b;
+  -moz-border-radius:3px;
+  -webkit-border-radius:3px;
+  border-radius:3px;
+  border: 1px solid #000000;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:13px;
+  padding:9px 24px;
+  text-decoration:none;
+  text-shadow: 0px 1px 0px #000000;
+}
+.checkout-button:hover{
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #d0451b));
+  background:-moz-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-webkit-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-o-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background:-ms-linear-gradient(top, #bc3315 5%, #d0451b 100%);
+  background: linear-gradient(to bottom, #1ea210 5%, #85ff74 100%);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#d0451b',GradientType=0);
+  background-color:#bc3315;
+}
+.checkout-button:active {
+  position:relative;
+  top:1px;
+}
+
+.material-window{
+
+  margin: auto;
+  margin-top: 30px; 
+  width: 1000px;
+  height: 400px;
+  overflow: auto;
+  border: 1px grey solid;
+}
+
+.material-list{
+	margin-top: 30px;
+	text-align: center;
+	clear: both;
+}
+.cartridge-quantity{
+  border: 2px solid grey;
+  border-radius: 3px;
+  font-size: 20px;
+  width: 80px;
+}
+.flavor-container{
+	pointer-events: none;
+	margin-bottom: 20px; 
+}
+.cartridge-logo img{
+	width: 125px;
+}
+.cartridge-logo, input, button{
+	pointer-events: auto;
+}
+.cartridge-logo:hover{
+	cursor: pointer;
+}
+.cartridge-logo:hover .overlay {
+	opacity: 1 !important;
+}
+
+/*Partial case fee info pop up */
+#modalContainer {
+  background-color:rgba(0, 0, 0, 0.3);
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0px;
+  left:0px;
+  z-index:10000;
+  
+}
+
+#alertBox {
+  position:relative;
+  width:300px;
+  min-height:100px;
+  margin-top:50px;
+  border:1px solid #666;
+  background-color:#fff;
+  background-repeat:no-repeat;
+  background-position:20px 30px;
+}
+
+#modalContainer > #alertBox {
+  position:fixed;
+}
+
+#alertBox h1 {
+  margin:0;
+  font:bold 0.9em verdana,arial;
+  background-color:#3073BB;
+  color:#FFF;
+  border-bottom:1px solid #000;
+  padding:2px 0 2px 5px;
+}
+
+#alertBox p {
+  font:0.7em verdana,arial;
+  height:50px;
+  padding-left:5px;
+  margin-left:55px;
+}
+
+#alertBox #closeBtn {
+  display:block;
+  position:relative;
+  margin:5px auto;
+  padding:7px;
+  border:0 none;
+  width:70px;
+  font:0.7em verdana,arial;
+  text-transform:uppercase;
+  text-align:center;
+  color:#FFF;
+  background-color:#357EBD;
+  border-radius: 3px;
+  text-decoration:none;
+}
+
+/* unrelated styles */
+
+#mContainer {
+  position:relative;
+  width:600px;
+  margin:auto;
+  padding:5px;
+  border-top:2px solid #000;
+  border-bottom:2px solid #000;
+  font:0.7em verdana,arial;
+}
+
+h1,h2 {
+  margin:0;
+  padding:4px;
+  font:bold 1.5em verdana;
+  border-bottom:1px solid #000;
+}
+
+code {
+  font-size:1.2em;
+  color:#069;
+}
+
+#credits {
+  position:relative;
+  margin:25px auto 0px auto;
+  width:350px; 
+  font:0.7em verdana;
+  border-top:1px solid #000;
+  border-bottom:1px solid #000;
+  height:90px;
+  padding-top:4px;
+}
+
+#credits img {
+  float:left;
+  margin:5px 10px 5px 0px;
+  border:1px solid #000000;
+  width:80px;
+  height:79px;
+}
+
+.important {
+  background-color:#F5FCC8;
+  padding:2px;
+}
+
+code span {
+  color:green;
+}
+.flavor-container{
+	display: inline-flex;
+}
+
+.visual-case-count{
+  /* Clear from example slots above */
+  clear: both;
+  margin-top: 65px;
+  justify-content: space-around;
+}
+
+.example-slot-text{
+  float: left;
+}
+
+/* "Full Cases: " and # underneath the visual case builder. */
+.case-notification,.js-case-count{
+  clear: both;
+  font-size: 24px;
+  color: #505050;
+}
+
+.overlay {
+  position: relative;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.9);
+  color: black; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  pointer-events: none;
+
+}
+
+/*			PLUS MINUS BUTTONS			*/
+.add-subtract-button{
+	/*THIS PREVENTS ZOOM ON DOUBLE TAP*/
+	touch-action: manipulation;
+	
+	font-size: 25px;
+	font-weight: bold;
+	border-radius: 50%;
+}
+
+.plus-minus-input {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.plus-minus-input .input-group-field {
+  text-align: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 1rem;
+}
+
+.plus-minus-input .input-group-field::-webkit-inner-spin-button,
+.plus-minus-input .input-group-field ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.plus-minus-input .input-group-button .circle {
+  border-radius: 50%;
+  padding: 0.25em 0.8em;
+}
+
+/*					PRODUCT INFO POP UP WINDOW				*/
+/* The Modal (background) */
+.modal {
+  display: none;
+  z-index: 20;
+  box-shadow: none;
+  width: 90%;
+  max-width: 450px;
+  overflow: auto;
+  margin: auto;
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  
+}
+
+/* Modal Content */
+.product-info {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+    right: 55px;
+   
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* 					HOME PAGE 					*/
+
+.registration-link{
+	text-decoration: none;
+	color: red;
+}
+
+.registration-link:hover{
+	
+	color: black;
+	cursor: pointer;
+}
+
+
+/*Responsive Design*/
+
+.row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+/* Clearfix */
+.row::before,
+.row::after {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-3, .col-4, .col-6, .col-12 {
+  float: left;
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+/* Mobile defaults */
+.col-3, .col-4, .col-6, .col-12 {
+  width: 100%;
+}
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 640px) {
+   /* 2 columns, 2/12 in % */
+  .col-3 {
+    width: 16.666%;
+  }
+  /* 3 columns, 3/12 in % */
+  .col-3 {
+    width: 25%;
+  }
+
+  /* 4 columns */
+  .col-4 {
+    width: 33.33%;
+  }
+
+  /* 6 columns */
+  .col-6 {
+    width: 50%;
+
+  }
+
+  /* 12 columns */
+  .col-12 {
+    width: 100%;
+  }
+}
+
+

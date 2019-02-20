@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Smart Coke</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+  	<!-- Navigation -->
+  <nav class="nav-bar">
+    <img class="logo" src="cocacolafreestylelogo.png">
+    <a href="#home" class="nav-button">Home</a>
+    <a href="#band" class="nav-button">Manual Order</a>
+    <a href="#band" class="nav-button">Proposed Order</a>
+    <a href="#tour" class="nav-button">Schedule Maintenance</a>
+    <a href="#contact" class="nav-button">Contact Us</a>
+  </nav>
+	<!-- ALL CARTRIDGE FLAVORS MUST HAVE cartridge-quantity & FLAVORNAME-quantity classes -->
+	<main>
+
+		<!-- The Modal or POP UP WINDOW for product description   - &times; is the x symbol for close button -->
+		<div id="myModal" class="modal">
+
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <div class="close">&times;</div>
+
+		    <p class="product-info" id="cocacola-info">Coca Cola MD 46oz. etc etc etc etc etc <br><br>Note: Flavored Coca Cola beverages pull from the COKE ZERO cartridges.</p>
+
+		    <p class="product-info" id="dietcoke-info">Diet Coke MD 46oz. etc etc etc etc etc <br><br></p>
+
+		    <p class="product-info" id="cokezero-info">Coke Zero MD 46oz. etc etc etc etc etc <br><br>Note: Flavored Coca Cola beverages pull from the COKE ZERO cartridges.</p>
+
+		    <p class="product-info" id="cfdietcoke-info">Caffeine Free Diet Coke MD 23oz. etc etc etc etc etc <br><br></p>
+
+		    <p class="product-info" id="fanta-info">Fanta MD 23oz. etc etc etc etc etc <br><br>Note: For 7000 Counter Top Dispensers Only - Previously labeled as Ingrediant Solution BB, Fanta cartridges are used in Fanta and Minute Made beverages.</p>
+
+        <p class="product-info" id="sprite-info">Sprite MD 23oz. etc etc etc etc etc <br><br>Note: Sprite requires both Sprite MD 23oz. and Ingrediant Solution AA 23oz.</p>
+
+		  </div>
+
+		</div>
+
+	
+<!-- <button type="button" onclick="alert('A case of cartridges consist of 16 slots. BLAH BLAH BLAH PARTIAL CASE FEE BLAH BLAH Ten Dollars!')">More Info</button> -->
+
+  <h3 class="section-header">Manual Order - Create Your Own Order Using the product catalog.</h3>
+	<div class="row case-builder-container">
+    <h3 class="case-builder-header">Visual Case Builder <input type="button" value = "More Info" class="case-builder-info" onclick="alert('A case of cartridges consist of 16 slots. BLAH BLAH PARTIAL CASE FEE BLAH BLAH <br>Ten Dollars!');" /></h3>
+    <div class="empty-slot case-slot-example empty-example">E</div><p class="example-slot-text"> = Empty Slot</p>
+
+    <div class="filled-slot case-slot-example slot-16">F</div><p class="example-slot-text"> = Full Slot</p>
+		<div class="visual-case-count">
+			<div class="case-slot empty-slot slot-16">E</div>
+			<div class="case-slot empty-slot slot-15">E</div>
+			<div class="case-slot empty-slot slot-14">E</div>
+			<div class="case-slot empty-slot slot-13">E</div>
+			<div class="case-slot empty-slot slot-12">E</div>
+			<div class="case-slot empty-slot slot-11">E</div>
+			<div class="case-slot empty-slot slot-10">E</div>
+			<div class="case-slot empty-slot slot-9">E</div>
+ 
+
+    
+			<div class="case-slot empty-slot slot-8">E</div>
+			<div class="case-slot empty-slot slot-7">E</div>
+			<div class="case-slot empty-slot slot-6">E</div>
+			<div class="case-slot empty-slot slot-5">E</div>
+			<div class="case-slot empty-slot slot-4">E</div>
+			<div class="case-slot empty-slot slot-3">E</div>
+			<div class="case-slot empty-slot slot-2">E</div>
+			<div class="case-slot empty-slot slot-1">E</div>
+		</div>
+		
+
+
+  
+    <div class="case-info-container">
+      <p class="case-notification">Full Cases: <span class="js-case-count">0</span></p>
+    </div>
+    <div class="col-6">
+      <p>Remaining Slots: <span class="js-remaining-count">0</span></p>
+    </div>
+    <!-- <div>
+      <p>Total Slots: <span class="js-slot-count">0</span></p>
+    </div> -->
+    <p class="total">Total: $<span class="total-amount">0</span></p>
+      <input type="button" value = "Check Out" class="checkout-button" onclick="alert('ADD SELECTED MATERIALS TO CART - NAVIGATE TO ORDER OVERVIEW PAGE.');" />
+  </div>
+	<div class="material-window">
+		<div class="material-list default-order">
+
+			<h4 class="product-info-notification">Click on logos for product info.</h4>
+			<!-- <div class="row">
+				<button type="button" class="sort-button-default">Default</button>
+				<button type="button" class="sort-button-alphabetical">Alphabetical</button>
+				<button type="button" class="sort-button-dispenser">Dispenser Order</button>
+			</div> -->
+
+
+			<!-- COCA COLA - Product descriptions are located in the modal down below -->
+			<div class="flavor-container input-group plus-minus-input" flavor="cocacola" sort-default="1" sort-dispenser="7">
+				<div class="cartridge-logo">
+					<img id="cocacola" src="cocacola.png">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity cocacola-quantity" type="number" min="0" name="cocacola" value="0">
+          <span>$<input class="price" id="cocacola-price" type="text" name="price" value="53.87" readonly></span>
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-cocacola-minus" data-quantity="minus" data-field="cocacola">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-cocacola-plus" data-quantity="plus" data-field="cocacola">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div>
+
+			<!-- DIET COKE -->
+			<div class="flavor-container input-group plus-minus-input" flavor="dietcoke" sort-default="2" sort-dispenser="8">
+				<div class="cartridge-logo">
+					<img id="dietcoke" src="dietcoke.png">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity dietcoke-quantity" type="number" min="0" name="dietcoke" value="0">
+          <span>$<input class="price" id="dietcoke-price" type="text" name="price" value="53.87" readonly></span>
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-dietcoke-minus" data-quantity="minus" data-field="dietcoke">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-dietcoke-plus" data-quantity="plus" data-field="dietcoke">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+  				
+			</div> 
+
+			<!-- COKE ZERO - Product descriptions are located in the modal down below -->
+			<div class="flavor-container input-group plus-minus-input" flavor="cokezero" sort-default="3" sort-dispenser="9">
+				<div class="cartridge-logo">
+					<img id="cokezero" src="cokezero.png">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity cokezero-quantity" type="number" min="0" name="cokezero" value="0">
+  				<span>$<input class="price" id="cokezero-price" type="text" name="price" value="53.87" readonly></span>
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-cokezero-minus" data-quantity="minus" data-field="cokezero">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-cokezero-plus" data-quantity="plus" data-field="cokezero">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div>
+
+			<!-- CF DIET -->
+			<div class="flavor-container input-group plus-minus-input" flavor="cfdietcoke" sort-default="4" sort-dispenser="10">
+				<div class="cartridge-logo">
+          <img id="cfdietcoke" src="cfdietcoke.png">
+          <div class="overlay">Click For Product Info</div>
+        </div>
+  				
+  				<input class="input-group-field cartridge-quantity cfdietcoke-quantity" type="number" min="0" name="cfdietcoke" value="0">
+  				<span>$<input class="price" id="cfdietcoke-price" type="text" name="price" value="24.35" readonly></span>
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-cfdietcoke-minus" data-quantity="minus" data-field="cfdietcoke">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-cfdietcoke-plus" data-quantity="plus" data-field="cfdietcoke">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div>
+
+			<!-- SPRITE - Product descriptions are located in the modal down below -->
+			<div class="flavor-container input-group plus-minus-input" flavor="sprite" sort-default="5" sort-dispenser="6">
+				<div class="cartridge-logo">
+					<img id="sprite" src="sprite.svg">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity sprite-quantity" type="number" min="0" name="sprite" value="0">
+  				<span>$<input class="price" id="sprite-price" type="text" name="price" value="84.30" readonly></span>
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-sprite-minus" data-quantity="minus" data-field="sprite">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-sprite-plus" data-quantity="plus" data-field="sprite">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div>
+
+			<!-- DR PEPPER - Product descriptions are located in the modal down below -->
+			<div class="flavor-container input-group plus-minus-input" flavor="drpepper" sort-default="6" sort-dispenser="5">
+				<div class="cartridge-logo">
+					<img id="drpepper" src="drpepper.png">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity drpepper-quantity" type="number" min="0" name="drpepper" value="0">
+  				<span>$<input class="price" id="drpepper-price" type="text" name="price" value="59.26" readonly></span>
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-drpepper-minus" data-quantity="minus" data-field="drpepper">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-drpepper-plus" data-quantity="plus" data-field="drpepper">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div>
+
+			<!-- MINUTE MAID LEMONADE - Product descriptions are located in the modal down below -->
+			<div class="flavor-container input-group plus-minus-input" flavor="minutemaid" sort-default="7" sort-dispenser="4">
+				<div class="cartridge-logo">
+					<img id="minutemaid" src="minutemaid.png">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity minutemaid-quantity" type="number" min="0" name="minutemaid" value="0">
+  				<span>$<input class="price" id="minutemaid-price" type="text" name="price" value="59.26" readonly></span>
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-minutemaid-minus" data-quantity="minus" data-field="minutemaid">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-minutemaid-plus" data-quantity="plus" data-field="minutemaid">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div>
+
+			<!-- FANTA - Product descriptions are located in the modal down below -->
+			<div class="flavor-container input-group plus-minus-input" flavor="fanta" sort-default="8" sort-dispenser="11">
+				<div class="cartridge-logo">
+					<img id="fanta" src="fanta.png">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity fanta-quantity" type="number" min="0" name="fanta" value="0">
+  				<span>$<input class="price" id="fanta-price" type="text" name="price" value="59.26" readonly></span>
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-fanta-minus" data-quantity="minus" data-field="fanta">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-fanta-plus" data-quantity="plus" data-field="fanta">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div> 
+
+			<!-- HI C - Product descriptions are located in the modal down below -->
+			<div class="flavor-container input-group plus-minus-input" flavor="hic" sort-default="9" sort-dispenser="12">
+				<div class="cartridge-logo">
+					<img id="hic" src="hic.png">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity hic-quantity" type="number" min="0" name="hic" value="0">
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-hic-minus" data-quantity="minus" data-field="hic">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-hic-plus" data-quantity="plus" data-field="hic">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div> 
+
+			<!-- POWERADE - Product descriptions are located in the modal down below -->
+			<div class="flavor-container input-group plus-minus-input" flavor="powerade" sort-default="10" sort-dispenser="13">
+				<div class="cartridge-logo">
+					<img id="powerade" src="powerade.svg">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity powerade-quantity" type="number" min="0" name="powerade" value="0">
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-powerade-minus" data-quantity="minus" data-field="powerade">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-powerade-plus" data-quantity="plus" data-field="powerade">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div>
+
+			<!-- LEMON - Product descriptions are located in the modal down below -->
+			<div class="flavor-container input-group plus-minus-input" flavor="lemon" sort-default="11" sort-dispenser="3">
+				<div class="cartridge-logo">
+					<img id="lemon" src="lemon.png">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity lemon-quantity" type="number" min="0" name="lemon" value="0">
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-lemon-minus" data-quantity="minus" data-field="lemon">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-lemon-plus" data-quantity="plus" data-field="lemon">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div>
+
+			<!-- RASPBERRY - Product descriptions are located in the modal down below -->
+			<div class="flavor-container input-group plus-minus-input" flavor="raspberry" sort-default="12" sort-dispenser="2">
+				<div class="cartridge-logo">
+					<img id="raspberry" src="raspberry.png">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity raspberry-quantity" type="number" min="0" name="raspberry" value="0">
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-raspberry-minus" data-quantity="minus" data-field="raspberry">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-raspberry-plus" data-quantity="plus" data-field="raspberry">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div>
+
+			<!-- APPLE - Product descriptions are located in the modal down below -->
+			<div class="flavor-container input-group plus-minus-input" flavor="apple" sort-default="13" sort-dispenser="1">
+				<div class="cartridge-logo">
+					<img id="apple" src="apple.png">
+					<div class="overlay">Click For Product Info</div>
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity apple-quantity" type="number" min="0" name="apple" value="0">
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-apple-minus" data-quantity="minus" data-field="apple">
+      					<i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+    				</button>
+  				</div>
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-apple-plus" data-quantity="plus" data-field="apple">
+      					<i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+    				</button>
+  				</div>
+
+			</div>
+
+			<!-- xFLAVORx
+			<div class="flavor-container input-group plus-minus-input">
+				<div>
+					<img class="cartridge-logo" src="xFLAVORx.png">
+				</div>
+  				
+  				<input class="input-group-field cartridge-quantity xFLAVORx-quantity" type="number"  min="0" name="xFLAVORx" value="0">
+  				
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-xFLAVORx-plus" data-quantity="plus" data-field="xFLAVORx">
+      					<i class="fa fa-plus" aria-hidden="true"> + </i>
+    				</button>
+  				</div>
+  				<div class="input-group-button">
+    				<button type="button" class="button hollow circle add-subtract-button js-xFLAVORx-minus" data-quantity="minus" data-field="xFLAVORx">
+      					<i class="fa fa-minus" aria-hidden="true"> - </i>
+    				</button>
+  				</div>
+			</div> -->
+			</div>
+		</div>
+      <!-- END MATERIAL LIST -->
+
+    
+
+    <footer>© 2019 The Coca-Cola Company, all rights reserved.</footer>
+
+  	</main>
+
+  	<script src="index.js"></script>
+</body>
+
+</html>
