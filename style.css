@@ -394,21 +394,21 @@ code span {
   z-index: 20;
   box-shadow: none;
   width: 90%;
-  max-width: 450px;
+  max-width: 650px;
   overflow: auto;
   margin: auto;
   position: fixed;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 100px; left: 0; bottom: 0; right: 0;
   
 }
 
 /* Modal Content */
 .product-info {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 70%;
+    margin: auto;
+    padding: 50px;
+    border: 3px solid #888;
+    width: 75%;
+    background-color: #f3f3f3;
 }
 
 /* The Close Button */
@@ -418,7 +418,7 @@ code span {
   font-size: 28px;
   font-weight: bold;
   position: absolute;
-    right: 55px;
+    right: 110px;
    
     color: #000;
     font-size: 30px;
