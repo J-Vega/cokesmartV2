@@ -61,6 +61,8 @@
 
         <p class="product-info" id="sprite-info">Sprite MD 23oz. etc etc etc etc etc <br><br>Note: Sprite requires both Sprite MD 23oz. and Ingrediant Solution AA 23oz.</p>
 
+        <p class="product-info" id="ing-aa-info">Ingredient Solution AA 23oz. <br><br>Flavors Used: Sprite, Minute Maid Lemonade (7000 Dispensers Only)<br><br>Note: Sprite requires both Sprite MD 23oz. and Ingrediant Solution AA 23oz.</p>
+
 		  </div>
 
 		</div>
@@ -115,11 +117,12 @@
 		<div class="material-list default-order">
 
 			<h4 class="product-info-notification">Click on logos and product names for product info.</h4>
-			<!-- <div class="row">
-				<button type="button" class="sort-button-default">Default</button>
+			<div class="row">
+				Arrange Order: <button type="button" class="sort-button-default">Default</button>
 				<button type="button" class="sort-button-alphabetical">Alphabetical</button>
 				<button type="button" class="sort-button-dispenser">Dispenser Order</button>
-			</div> -->
+      </span>
+			</div><br>
 
 
 			<!-- COCA COLA - Product descriptions are located in the modal down below -->
@@ -421,6 +424,30 @@
   				</div>
 
 			</div>
+
+
+      <!-- INGREDIENT SOLUTION AA - Product descriptions are located in the modal down below -->
+      <div class="flavor-container input-group plus-minus-input" flavor="ing-aa" sort-default="13" sort-dispenser="1">
+        <div class="cartridge-logo">
+          <img id="ing-aa" src="ing-aa.jpeg">
+          <div class="overlay">Click For Product Info</div>
+        </div>
+          
+          <input class="input-group-field cartridge-quantity ing-aa-quantity" type="number" min="0" name="ing-aa" value="0">
+          <span>$<input class="price" id="ing-aa-price" type="text" name="price" value="8.86" readonly></span>
+          <div class="input-group-button">
+            <button type="button" class="button hollow circle add-subtract-button js-ing-aa-minus" data-quantity="minus" data-field="ing-aa">
+                <i class="fa fa-minus" aria-hidden="true"> &minus; </i>
+            </button>
+          </div>
+          
+          <div class="input-group-button">
+            <button type="button" class="button hollow circle add-subtract-button js-ing-aa-plus" data-quantity="plus" data-field="ing-aa">
+                <i class="fa fa-plus" aria-hidden="true"> &plus; </i>
+            </button>
+          </div>
+
+      </div>
 
 			<!-- xFLAVORx
 			<div class="flavor-container input-group plus-minus-input">

@@ -155,6 +155,7 @@ function addCartridges(){
         parseInt($('.apple-quantity').val()) + 
         parseInt($('.hic-quantity').val()) + 
         parseInt($('.powerade-quantity').val()) + 
+        parseInt($('.ing-aa-quantity').val()) + 
         parseInt($('.fanta-quantity').val());
 
    var priceTotal = 
@@ -165,6 +166,7 @@ function addCartridges(){
     document.getElementById("sprite-price").value * parseInt($('.sprite-quantity').val()) +
     document.getElementById("drpepper-price").value * parseInt($('.drpepper-quantity').val()) +
     document.getElementById("minutemaid-price").value * parseInt($('.minutemaid-quantity').val()) +
+    document.getElementById("ing-aa-price").value * parseInt($('.ing-aa-quantity').val()) +
     document.getElementById("fanta-price").value * parseInt($('.fanta-quantity').val());
 
     $('.total-amount').text(priceTotal.toFixed(2));
